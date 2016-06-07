@@ -1,6 +1,8 @@
 angular.module('smartApp', []).controller('regCtrl', function ($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = "Doe";
+    
+    
+    $scope.firstName  = "";
+    $scope.lastName   = "";
 
 
     $scope.birth_day = [];
