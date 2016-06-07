@@ -1,0 +1,218 @@
+<html>
+
+<head>
+    <title> Registration Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/controllers/registration.js"></script>
+</head>
+
+<body ng-app="smartApp" ng-controller="regCtrl">
+
+    <div class="container-fluid">
+        <form name="regForm">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1>Registration Form</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>First Name:</label>
+                            <input type="text" name="fName" class="form-control" placeholder="First Name" autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Last Name:</label>
+                            <input class="form-control" type="text" name="lName" placeholder="Last Name" autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-Mail:</label>
+                            <input type="text" name="lName" class="form-control" placeholder="email" autofocus>
+                        </div>
+
+                        <label class="radio-inline">Gender:</label>
+                        <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+
+
+
+
+                    </div>
+
+
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Password:</label>
+                            <input type="password" name="password" class="form-control" placeholder="Password" autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Address:</label>
+                            <textarea name="Address" class="form-control" cols="10" rows="5" placeholder="Address"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mobile:</label>
+                            <input type="tel" name="mobile_no" class="form-control" placeholder="Mobile Number">
+                        </div>
+                        <div class="form-group">
+                            <label>City:</label>
+                            <input type="text" name="city" class="form-control" placeholder="City" autofocus>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Pin-Code:</label>
+                    <input type="text" name="zip_code" class="form-control" placeholder="Pin-Code" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label>State:</label>
+                    <input type="text" name="state" class="form-control" placeholder="State" autofocus>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" name="country" class="form-control" placeholder="Country" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label>Hobbies: </label>
+                    <input type="text" name="hobbie" class="form-control" placeholder="Hobbies" autofocus multiple>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="form-group">
+                    <label>Qualification:</label>
+                    <select name="qualification" id="qualification" class="form-control">
+                            <option value="-1">-select-</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="B.E.">B.E.</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BSc">BSc</option>
+                            <option value="B.Pharm">B.Pharm</option>
+                       </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Pass-Out:</label>
+                    <select name="passout" id="passout" class="form-control">
+                            <option value="-1">Year</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Percentage/CGPA:</label>
+                    <input type="text" name="percentage" placeholder="Percentage/CGPA" class="form-control">
+
+                </div>
+
+                <label>Skills:</label>
+                <input type="checkbox" name="skill">JAVA
+                <input type="checkbox" name="J2EE">J2EE
+                <input type="checkbox" name="JavaScript">JavaScript
+                <input type="checkbox" name="Spring">Spring
+                <input type="checkbox" name="Hibernate">Hibernate
+                <input type="checkbox" name="skill">AngularJs other:
+                <input type="text" name="other">
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-lg-6">
+
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Dob:</label>
+                    <select name="Birth_Day" id="Birth_Day" class="form-control">
+                  <option value="">Day</option> <!-- not selected / blank option -->
+                <option ng-repeat="d in birth_day" value="{{d}}">{{d}}</option>
+                
+                </select>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="form-group">
+                    
+                    <select name="Birth_Day" id="Birth_Day" class="form-control">
+                  <option value="">Month</option> <!-- not selected / blank option -->
+                <option ng-repeat="bm in Birth_Month" value="{{bm}}">{{bm}}</option>
+                
+                </select>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <button type="button" class="btn btn-primary" ng-click="saveUser();">SignUp</button>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    </div>
+    <!-- End of Container !-->
+    </form>
+
+</body>
+
+</html>
