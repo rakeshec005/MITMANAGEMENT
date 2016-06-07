@@ -3,6 +3,9 @@ angular.module('smartApp', []).controller('regCtrl', function ($scope) {
     
     $scope.firstName  = "";
     $scope.lastName   = "";
+    $scope.email      = "";
+    $scope.gender     = "";
+    $scope.
 
 
     $scope.birth_day = [];
